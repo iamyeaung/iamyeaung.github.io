@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+</head>
+
+<body>
+    <h1>Student Registration From</h1>
+    <form action="request.php" method="get">
+        <label for="name">Name</label>
+        <input type="text" name="stu_name" id="name" />
+        <br /><br />
+
+        <label for="email">Email</label>
+        <input type="email" name="stu_email" id="email" />
+        <br /><br />
+
+        <label for="password">Password</label>
+        <input type="password" name="stu_password" id="password" />
+        <br /><br />
+
+        <label for="phone">phone</label>
+        <input type="number" name="stu_number" id="number" />
+        <br /><br />
+
+        <label for="dob">Date Of Birth</label>
+        <input type="date" name="stu_dob" id="dob" />
+        <br /><br />
+
+        <label for="passport">Passport</label>
+        <input type="file" accept=".png,.jpg" name="stu_passport" id="passport" />
+        <br /><br />
+
+        <label for="year">Years</label>
+        <select name="stu_year" id="year">
+            <option value="">Choose</option>
+            <option value="1">First Year</option>
+            <option value="2">Second Year</option>
+            <option value="3">Third Year</option>
+        </select>
+        <br /><br />
+
+        <label for="">Gender</label>
+        <br /><br />
+        <input type="radio" name="gender" id="male" value="male" /><label for="male">Male</label>
+        <input type="radio" name="gender" id="female" value="female" /><label for="female">Female</label>
+        <input type="radio" name="gender" id="other" value="other" /><label for="other">Other</label>
+        <br><br>
+
+        <label for="">Hobby</label>
+        <input type="checkbox" name="gaming" id="gaming" value="gaming"><label for="gaming">Gaming</label>
+        <input type="checkbox" name="travle" id="travle" value="travle"><label for="travle">Travle</label>
+        <input type="checkbox" name="entertainment" id="entertainment" value="entertainment"><label for="entertainment">Entertainment</label>
+        <input type="checkbox" name="football" id="football" value="football"><label for="football">Football</label>
+        <input type="checkbox" name="book" id="book" value="book"><label for="book">Books</label>
+        <br><br>
+
+        <label for="address">Address</label>
+        <textarea name="stu_address" id="address" cols="40" rows="15"></textarea>
+        <br /><br />
+
+           <input type="time" name="" id=""> 
+           <br><br>
+           <input type="datetime-local" name="" id="">
+           <br><br>
+           <input type="week" name="" id="">
+           <br><br>
+           <input type="color" name="" id="">
+           <br><br>
+           <input type="range" min="0" max="100" name="range" id="">
+           <br><br>
+
+           <input type="text" name="" id="" required>
+           <input type="text" name="" id="32" readonly>
+           <input type="text" name="" id="32" disabled>
+           <input type="email" name="" id="" placeholder="09xxxxxxx">
+
+        <br><br>
+        <button type="submit">Save</button>
+    </form>
+</body>
+
+</html>
