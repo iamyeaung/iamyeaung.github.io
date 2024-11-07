@@ -1,0 +1,117 @@
+<!-- 
+4 Type of CSS Selector  
+
+Uive  
+/* 
+  .Universal selector
+  .Elements selector
+*/
+
+1. Element or Type Selector
+
+2. ID Selector
+      id attribute ထဲမှာရှိတဲ့ value ကို select လုပ်ခြင်း
+      id attribute ရှိတဲ့ element ကိုပဲ သက်ရောက်မှုရှိ
+      id ကို select လုပ်လိုပါက # ဖြင့် select လုပ်ရမည်
+
+3. Class Selector
+     class attribute ထဲမှာရှိတဲ့ value ကို select လုပ်ခြင်း
+     class attribute ရှိတဲ့ value တူတဲ့ elements တိုင်းကို သက်ရောက်မှုရှိမယ်။
+     class ကို select လုပ်ပြီဆိုရင် ( . ) ဖြင် select လုပ်ရမည်။
+
+4. Attribute Selector
+
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Document</title>
+
+  <style>
+    /* Universal selector */
+    * {
+      color: red;
+      margin: 5;
+      margin-left: 5;
+      padding: 5;
+    }
+
+    /* Elements selector */
+    h1 {
+      color: black;
+    }
+
+    p {
+      background-color: aqua;
+    }
+
+    /* id selector */
+    #nose {
+      background-color: red;
+      font-size: 50px;
+      color: white;
+      text-align: center;
+    }
+
+    /* class selector */
+
+    .eye-makeup {
+      color: blue;
+      background-color: white;
+      font-size: 80px;
+    }
+
+    /* attribute selector */
+    a[title="me"] {
+      font-size: 40px;
+    }
+
+    input[type="email"] {
+      background-color: brown;
+    }
+
+    /* descendant selector */
+    div p {
+      background-color: blue;
+      color: white;
+    }
+    
+    /* child selector */
+    div>p {
+      color: black;
+      font-size: 24px;
+      padding-left: 10px;
+    }
+  </style>
+</head>
+
+<body>
+  <h1>Hello Selector</h1>
+  <p>Hello this is selector lesson</p>
+
+  <p id="nose">Nose</p>
+  <p class="eye-makeup">Left Eye</p>
+  <p class="eye-makeup">Right Eye</p>
+
+  <a href="" title="me">Google</a><br />
+  <input type="email" name="" id="" /><br />
+  <input type="text" name="" id="" />
+
+  <div>
+    <p>This is p 1</p>
+    <p>This is p 2</p>
+    <p>This is p 3</p>
+    
+    <span>
+      <p>This is p 4</p>
+    </span>
+
+    <p>This is p 5</p>
+  </div>
+</body>
+
+</html>

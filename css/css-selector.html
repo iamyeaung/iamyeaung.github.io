@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        /* Element or Type Selector */
+        p{
+            padding: 20px;
+        }        
+        /* Class Selector */
+        .broswer{
+            background: cyan;
+        }
+        /* ID Selector */
+        #popular{
+            font-weight: bold;
+        }
+        /* Attribure Selector */
+        input[type=text]{
+            width: 400px;
+        }
+        /* Multi Element or Type Selector */
+        h1,h2,h3,h4,h5,h6{
+            padding-left: 20px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        /* Descendant Selector */
+        /* ul li{
+            padding: 10px; 
+            border: 1px solid red;
+        }     */
+        
+        /* Child Selector */
+        ul > li {
+            padding: 10px;
+            border: 1px solid red;
+        }
+
+    </style>
+    </head>
+<body>
+    <h1>Hello</h1>
+    <h2>Hello</h2>
+    <h3>Hello</h3>
+    <h4>Hello</h4>
+    <h5>Hello</h5>
+    <h6>Hello</h6>
+
+    <p>Broswer List</p>  
+    <p class="broswer" id="popular">Chrome</p>
+    <p class="broswer">Firefox Broswer</p>
+    <input type="text">
+    <input type="submit">
+
+    <ul>
+        <li>Server</li>
+        <li>
+            Broswer <br>
+            <ol>
+                <li>Chrome</li>
+                <li>Firefox</li>
+            </ol>
+        </li>
+    </ul>
+
+    <ul>
+        <li>Server</li>
+        <li>
+            Broswer
+            <ol>
+                <li>Chrome</li>
+                <li>Firefox</li>
+            </ol>
+        </li>
+    </ul>
+
+
+</body>
+</html>

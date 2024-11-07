@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        h1 a:hover{
+            color: red;
+            font-size: 50px;
+            background-color: aqua;
+        }
+
+        h1:hover{
+            color: aqua;
+        }
+
+        h2 a:link{
+            color: orange;
+        }
+
+        h2 a:visited{
+            color: green;
+        }
+
+        h2 a:active{
+            color: yellow;
+        }
+
+        input[type="text"]:focus{
+            background-color: aqua;
+            padding-left: 5px;
+        }
+
+        ul li:first-child{
+            color: blue;
+            font-weight: bold;
+        }
+
+        ul li:last-child{
+            color: red;
+            font-style: italic;
+            font-weight: bold;
+        }
+
+        ul li:nth-child(2){
+            color: green;
+        }
+
+    </style>
+</head>
+<body>
+
+    <h1>Pseudo Selector</h1>
+    <h1>
+        <a href="https://google.com">Google</a>
+    </h1>
+
+    <h2>
+        <a href="https://google.com">Google</a>
+        <a href="https://usatoday.com" target="_blank">USA Today</a>
+        <a href="https://cnn.com" target="_blank">CNN</a>
+    </h2>
+
+
+    <input type="text" name="" id="">
+
+    <ul>
+        <li>PHP</li>
+        <li>JAVA</li>
+        <li>Python</li>
+        <li>Dart</li>
+        <li>SEO</li>
+        <li>Security</li>
+    </ul>
+
+
+</body>
+</html>
