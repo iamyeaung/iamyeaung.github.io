@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Unint</title>
+
+    <style>
+        /* Absolute uniit - အရွယ်အစားကို အတိအကျ အသေသတ်မှတ်ခြင်း
+        px (pixels) - button, icon, image
+                    - heading, label
+            pt (point), cm,mm,in - printing .... */
+
+        button {
+            border: 1px solid black;
+            padding: 10px 100px;
+        }
+
+        /* percentage (%) - perent element ရဲ့ အရွယ်အစားပေါ်မူတည်ပြီးပြောင်း */
+        .container {
+            margin-top: 20px;
+            width: 100%;
+            background-color: red;
+        }
+
+        .box {
+            width: 50%;
+            padding: 15%;
+            background-color: gray;
+        }
+
+        /* element (em) - parent element ရဲ့ font size ပေါ်မူတည် */
+
+        .em-container {
+            font-size: 20px;
+        }
+
+        .normal-text {
+            font-size: 1em;
+            /* 1em * 20px = 20px */
+        }
+
+        .larg-text {
+            font-size: 2em;
+            /* 2em * 20px = 40px*/
+        }
+
+        .em-box {
+            border: 1px solid black;
+            padding: 1em;
+            margin: 5em;
+        }
+
+        /* rem */
+
+        html {
+            font-size: 32px;
+        }
+
+        .header {
+            /* 1 * 16 = 16px */
+            font-size: 1rem;
+        }
+
+        .title {
+            /* 2 * 16 = 32px */
+            font-size: 1rem;
+        }
+
+        .description {
+            /* 3 * 16 = 48px */
+            font-size: 1rem;
+        }
+
+        /* vw - view port width 
+           vh - view port height 
+        */
+        .vw-container{
+            width: 50vw;
+            height: 100px;
+            background-color: lightblue;
+        }
+
+        .vh-container{
+            height: 10vh;
+            background-color: lightcoral;
+        }
+
+    </style>
+</head>
+
+<body>
+    <button>Save</button>
+
+    <div class="container">
+        <div class="box">Box</div>
+    </div>
+
+    <!-- em -->
+    <div class="em-container">
+        <p class="normal-text">Normal Text</p>
+        <p class="larg-text">Large text</p>
+    </div>
+
+    <div class="em-box">
+        <p>box content</p>
+    </div>
+
+    <!-- rem -->
+
+    <div class="header">
+        <p class="title">Title</p>
+        <p class="description">This is rem</p>
+        <h5>Hello</h5>
+    </div>
+
+    <!-- vw view port width -->
+     <div class="vw-container">
+        <p>This is viewport width This is viewport width This is viewport width</p>
+     </div>
+
+         <!-- vh view port width -->
+         <div class="vh-container">
+            <p>This is viewport height This is viewport width This is viewport width</p>
+         </div>
+</body>
+
+</html>
