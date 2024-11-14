@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+
+            .flex-container{
+                display: flex;
+                background-color: aqua;
+                height: 200px;
+                /* 
+                    justify-content သည် ဘယ် - ညာ 
+                        - flex-start
+                        - flex-end
+                        - center
+                
+                */
+                justify-content: flex-end;
+                  /* 
+                    align-item သည် ထက် - အောက်
+                        - flex-start
+                        - flex-end
+                        - center
+                
+                */
+                /* align-items: flex-end; */
+            }
+            
+            .flex-item{
+                background-color: lightblue;
+                padding: 10px;
+                margin: 5px;
+            }
+
+    </style>
+
+</head>
+<body>
+    
+        <div class="flex-container">
+            <p class="flex-item">Item1</p>
+            <p class="flex-item">Item2</p>
+            <p class="flex-item">Item3</p>
+        </div>
+
+
+</body>
+</html>

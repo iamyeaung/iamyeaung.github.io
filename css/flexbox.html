@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flex Box</title>
+
+    <style>
+        .flex-container{
+            display: flex;
+            background-color: red;
+            margin: 10px;
+            /* 
+                - nowarp         -> default screen 
+                - warp           -> ဆန့်သလောက်ပြပြီး နောက် line ကိုဆင်း
+                - warp-reverse   -> wrap အတိုင်း ပြောင်းပြန်စီ
+            */
+            flex-wrap: wrap;
+             /* 
+                flex-direction
+                - row               ->
+                - row-reverse       ->
+                - column            ->
+                - column-reverse    ->          
+             */
+            flex-direction: row;
+
+            /* 
+                - justicfy-content
+                    - flex-start ->
+                    - flex-end ->
+                    - center ->
+                    - space-between            
+            */
+            flex-wrap: wrap-reverse;
+        }
+
+        .flex-container .flex-item{
+            background-color: white;
+            width: 150px;
+            margin: 50px;
+            padding: 20px;
+        }
+
+        h2{
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    
+    <div class="flex-container">
+        <div class="flex-item">
+            <h2>Title 2</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 0</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 5</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 1</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 3</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 0</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 8</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 9</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 7</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 6</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+
+        <div class="flex-item">
+            <h2>Title 4</h2>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ipsum laborum soluta consequatur reiciendis nemo vero accusamus repellendus placeat recusandae, vitae quidem fugiat numquam quam autem incidunt ipsam alias perferendis, perspiciatis itaque saepe magni aliquam maiores porro debitis! Ipsam accusamus laborum esse repudiandae temporibus illo libero, culpa enim perferendis adipisci perspiciatis.</p>
+        </div>
+    </div>
+</body>
+</html>
