@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grid View Lesson</title>
+
+    <style>
+        .grid-container{
+            display: grid;
+            /* fr - fraction အပိုင်းအစ */
+            grid-template-columns: 1fr 2fr 1fr;
+            /* grid-template-columns: repeat(4, 1fr); */
+            grid-template-rows: 1fr 2fr 1fr;
+            /* grid-template-rows: repeat(3,2fr); */
+
+            /* column-gap: 10px;
+            row-gap: 30px; */
+            /* gap: row col; */
+            gap: 30px 20px;
+        }
+
+        .grid-item{
+            background-color: cyan;
+            border: 1px solid red;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .item1{
+            /* line1 | column 1, line2 column2, line3 column3, line4 */
+
+            /* grid-column:col နေရာ / ဘယ် line ထိ ပေါ်မလဲ  */
+            background-color: white;
+            grid-column: 2 / 3;
+            grid-row: 1;
+        }
+
+        /* .item4{
+            background-color: blue;
+            grid-column: 1;
+            grid-row: 1;
+        } */
+    </style>
+
+</head>
+<body>
+    <div class="grid-container">
+
+        <div class="grid-item item1">
+            <h3>Header 1</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item2">
+            <h3>Header 2</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item3">
+            <h3>Header 3</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item4">
+            <h3>Header 4</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item5">
+            <h3>Header 5</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item6">
+            <h3>Header 6</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+
+        <div class="grid-item item7">
+            <h3>Header 7</h3>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Neque obcaecati quisquam provident fugiat itaque, ratione beatae dolor officiis vel esse accusamus magnam earum, voluptatibus, molestias delectus! Dolorum eveniet sit officia.</p>
+        </div>
+    </div>
+</body>
+</html>
