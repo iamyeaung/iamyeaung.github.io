@@ -114,7 +114,7 @@
     margin-left: 5px;
     height: 40px;
     background-color: #f0f2f5;
-    background-image: url('/images/search.png');
+    background-image: url('../images/search.png');
     background-size: 20px 20px;
     background-repeat: no-repeat;
     background-position: 10px center; /*left မှ 10px အကွာ၊ vertically center */
