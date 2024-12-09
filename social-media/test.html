@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Navigation Tooltip Example</title>
+    <style>
+      .center-nav-menu {
+        display: flex; /* Use flexbox for easy alignment */
+        justify-content: center; /* Center the items horizontally */
+      }
+
+      .nav-icon {
+        position: relative;
+        display: inline-block;
+        margin: 0 10px; /* Add some spacing between icons */
+        cursor: pointer;
+      }
+
+      .nav-icon img {
+        width: 30px; /* Adjust icon size as needed */
+        height: 30px;
+      }
+
+      .nav-icon .tooltip {
+        visibility: hidden;
+        background-color: #555;
+        color: #fff;
+        text-align: center;
+        padding: 5px;
+        border-radius: 6px;
+        position: absolute;
+        z-index: 1;
+        top: 125%;
+        left: 50%;
+        transform: translateX(-50%);
+        opacity: 0;
+        transition: opacity 0.3s;
+        white-space: nowrap; /* Prevent tooltip text from wrapping */
+      }
+
+      .nav-icon:hover .tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
+
+      /* Style for the circle-border class */
+      .circle-border {
+        border-radius: 50%; /* Make it a circle */
+        border: 2px solid #ccc; /* Add a border */
+        padding: 5px; /* Add some padding */
+      }
+
+      .circle-border img {
+        border-radius: 50%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="center-nav-menu">
+      <a href="#" class="nav-icon">
+        <img src="/images/home.png" alt="Home" />
+        <span class="tooltip">Home</span>
+      </a>
+      <a href="#" class="nav-icon">
+        <img src="/images/user.png" alt="User" />
+        <span class="tooltip">Friends</span>
+      </a>
+      <a href="#" class="nav-icon circle-border">
+        <img src="/images/networking.png" alt="Networking" />
+        <span class="tooltip">Groups</span>
+      </a>
+    </div>
+
+    <script>
+      const navIcons = document.querySelectorAll(".nav-icon");
+
+      navIcons.forEach((icon) => {
+        const tooltip = icon.querySelector(".tooltip");
+        
+        icon.addEventListener('mouseenter',()=> {
+          tooltip.style.visibility = 'visible';
+          tooltip.style.opacity = 1;
+        });
+
+        icon.addEventListener('mouseleave',()=> {
+          tooltip.style.visibility = 'hidden';
+          tooltip.style.opacity = 0;
+        });
+      });
+    </script>
+  </body>
+</html>
