@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+   
+    <style>
+        table{
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: #f4f4f4;
+        }
+
+    </style>
+</head>
+<body>
+    <h1 id="title-add">Add Student Registration</h1>
+    <h2 id="title-update">Update Student Registration</h2>
+
+    Name :: <input type="text" id="name"><br><br>
+    Email :: <input type="email" id="email"><br><br>
+    Phone :: <input type="number" id="phone"><br><br>
+
+    <label for="year">Select Year :: </label>
+    <select name="year" id="year">
+        <option value="first year">First Year</option>
+        <option value="second year">Second Year</option>
+        <option value="third year">Third Year</option>
+    </select><br><br>
+    <button id="add-button">Add</button><br>
+    <button id="update-button">Update</button><br><br>
+
+    <table> 
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+            <tbody id="student-list"></tbody>
+    </table>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            let studentCount = 0;
+
+            //Hide update button and title
+            $('#update-button').hide();
+            $('#title-update').hide();
+
+            $('#add-button').click(function(){
+                //input validation
+                if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val() == '' || $('#year').val() == ''){
+                    aleart('Please fill all the fields');
+                    return;
+                }
+                //Increment student count
+                studentCount ++;
+                $('#no').text(studentCount);
+
+                //get input values
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+                let year = $('#year').val();
+                               
+                               
+                //Create new row
+                let newStudentRow =
+                `
+                <tr> 
+                    <td>${studentCount}</td>    
+                    <td class="student-name">${name}</td>
+                    <td class="student-email">${email}</td>
+                    <td class="student-phone">${phone}</td>
+                    <td class="student-year">${year}</td>
+                    <td>
+                        <button class="edit-btn">Edit</button>    
+                        <button class="delete-btn">Delete</button>    
+                        
+                    </td>                    
+                </tr>
+                `;
+                //Add new row to the table
+                $('#student-list').append(newStudentRow);
+
+                //Clear input fileds
+                $('#name').val('');
+                $('#email').val('');
+                $('#phone').val('');
+                $('#year').val('');
+
+                //Delete student
+                $('.delete-btn').click(function(){
+                    $(this).closest('tr').remove();
+                    studentCount --;
+                });
+
+                //Edit student
+                $('.edit-btn').click(function(){
+                    let row = $(this).closest('tr');
+                    currentEditRow = row;
+
+                    //Fill form with student data
+                     // Edit လုပ်မယ့် row က data တွေကို input fields တွေထဲ ပြန်ထည့်မယ်
+                    $('#name').val(row.find('.student-name').text());
+                    $('#email').val(row.find('.student-email').text());
+                    $('#phone').val(row.find('.student-phone').text());
+                    $('#year').val(row.find('.student-year').text());
+
+                    //Reset buttons
+                    $('#add-button').hide();
+                    $('#update-button').show();
+
+                    //Reset title 
+                    $('#title-add').hide();
+                    $('#title-update').show();
+
+
+                //Update student
+                $('#update-button').click(function(){
+                    if(!currentEditRow) return;
+
+                    //get update input values
+                    let updateName = $('#name').val();
+                    let updateEmail = $('#email').val();
+                    let updatePhone = $('#phone').val();
+                    let updateYear = $('#year').val();
+
+
+                    //Update row with new values
+                    currentEditRow.find('.student-name').text(updateName);
+                    currentEditRow.find('.student-email').text(updateEmail);
+                    currentEditRow.find('.student-phone').text(updatePhone);
+                    currentEditRow.find('.student-year').text(updateYear);
+
+                    //Clear input fileds
+                        $('#name').val('');
+                        $('#email').val('');
+                        $('#phone').val('');
+                        $('#year').val('');
+
+                        //Reset title
+                        $('#title-add').show();
+                        $('#title-update').hide();
+
+                        //Reset buttons
+                        $('#add-button').show();
+                        $('#update-button').hide();
+
+                        //Clear the currentEditRow variable
+                        currentEditRow = null;
+
+                });
+                    
+                });
+
+            })
+        });
+    </script>
+</body>
+</html>
