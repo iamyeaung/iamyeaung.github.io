@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        x = 10;
+        y = "10";
+        z = x + y;
+        console.log("String concatenation");        
+        console.log("Total is :", z);
+        console.log('Type is : ',typeof(z));
+        
+        x = 10;
+        y = "10";
+        z = x - y;
+        console.log('Numeric subtraction');        
+        console.log("Total is :", z);
+        console.log('Type is : ',typeof(z));
+
+
+        // Without semicolon, ASI error may occur
+            // var a = 10
+            // [1, 2, 3].forEach(num => console.log(num)) // Error
+
+        // Fix with semicolon
+            var a = 10;
+            [1, 2, 3].forEach(num => console.log(num)); // Correct
+    
+        
+        // Avoid this
+            let badString = 'She said, "It\'s a beautiful day!"';
+            console.log(badString);
+            
+
+        // Use Template Literals instead
+            let goodString = `She said, "It's a beautiful day!"`;
+            console.log(goodString);
+            
+    </script>
+    
+</body>
+</html>

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //loop
+
+        for(let i = 1; i <= 5; i ++){
+            document.write('<h4>Hello Js</h4>')
+        }
+
+        let laptops = ['Dell','Acer','Lenove','HP','Asus'];
+        console.log(laptops);
+        
+
+        for(let j = 0; j < laptops.length; j++){
+            // backticks (``) ဖြင့်သုံးရမည် 
+            document.write(`<h4> ${laptops[j]} </h4>`);            
+        }
+
+        // *****
+        // *****
+        // *****
+        // *****
+        // *****
+
+        for(let m = 0; m < 5; m++){
+            for(let k = 0; k < 5; k++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+
+        // *
+        // **
+        // ***
+        // ****
+        // *****
+
+        document.write('print start 1 to 5'+'<br>');
+        for(let g = 0; g <=5; g ++){
+            for(let h = 0; h < g; h ++){
+                document.write('*');
+            }
+            document.write('<br>');
+        }
+
+        document.write('print start 5 to 1'+'<br>');
+
+        // *****
+        // ****
+        // ***
+        // **
+        // *
+                    // 1 <= 2 
+        for(let x = 0; x <=5; x++ ){
+
+            for(let y = x; y < 5; y++ ){
+                document.write('*');
+            }
+            document.write('<br>'); 
+        }
+
+
+        // number1 = Number(prompt('Enter first number : '));
+        // number2 = Number(prompt('Enter first number : '));
+        // document.write(`<p>${number1} + ${number2} is = ${number1 + number2}</p>`);
+
+        
+
+
+    </script>
+</body>
+</html>

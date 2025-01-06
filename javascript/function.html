@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <script>
+        //function
+
+        function funName(){
+            document.write('<h4>Hello Function</h4>');
+        }
+        funName();
+
+        function result(num1,num2){
+            let add = num1 + num2;
+            document.write(`<p>num2 + num2 is : ${add}</p>`);
+        }
+        result(5,30);
+
+        function sub(num1=15,num2=20){
+            let result = num1 - num2;
+            document.write(`num1 - num2 is : ${result}`);
+        }
+
+        sub();
+        sub(50,80);
+
+        function getSize(length,width,height){
+            let area = length * width;
+            let volume = length * width * height;
+            let sizes = [area,volume];
+            return sizes;
+        }
+        
+        let length = Number(prompt('Enter length : '));
+        let width = Number(prompt('Enter width : '));
+        let height = Number(prompt('Enter height : '));
+
+        let area = getSize(length,width,0)[0];
+        document.write(`<p>Area is ${area}<p>`);
+        console.log(area);
+
+        let volume = getSize(length,width,height)[1];
+        document.write(`<p>Volumn is ${volume}<p>`);
+        console.log(volume);
+        
+        
+
+
+
+
+
+    </script>
+
+
+</body>
+</html>

@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM selector</title>
+</head>
+<body>
+    <h1 id="heading">DOM <em>selector</em></h1>
+    <h3 id="lang">Languages</h3>
+    <p class="language">HTML</p>
+    <p class="language">CSS</p>
+    <p class="language">JavaScript</p>
+    <p class="language">Jquery</p>
+    <p class="language">Bootstrap</p>
+
+    <p id="adding"></p>
+    <p id="adding1"></p>
+
+    <button onclick="languages()">Click</button>
+
+    <script>
+        function languages(){
+            // alert('Hello HTML');
+        let heading = document.getElementById('heading');
+            console.log(heading);
+            console.log(heading.innerHTML);
+            console.log(heading.innerText);
+
+            let adding = document.getElementById('adding');
+            let adding1 = document.getElementById('adding1');
+            console.log(adding);
+            console.log(adding1);
+
+            adding.innerHTML = '<i>This is innerHTML</i>';
+            adding1.innerText = '<i>This is innerText</i>';
+
+
+            let language = document.getElementsByClassName('language');
+            console.log(language);
+            console.log(language[3]);
+            console.log(language[4].innerText);
+            // console.log(language[4].innerHTML);
+
+            let tag_name = document.getElementsByTagName('p');
+            console.log(tag_name);
+            console.log(tag_name[2]);
+            console.log(tag_name[2].innerText);
+
+            let q_heading = document.querySelector('#heading');
+            console.log(q_heading);
+            console.log(q_heading.innerText);
+
+            let q_language = document.querySelector('.language');
+            console.log(q_language);
+
+            let q_languages = document.querySelectorAll('.language');
+            console.log(q_languages);
+            console.log(q_languages[2]);
+
+            let q_tag = document.querySelector('p');
+            console.log(q_tag);
+
+            let q_tagAll = document.querySelectorAll('p');
+            console.log(q_tagAll);
+            
+            
+
+
+
+
+            
+            
+            
+            
+            
+            
+
+            
+            
+            
+
+
+
+        }
+    </script>
+</body>
+</html>

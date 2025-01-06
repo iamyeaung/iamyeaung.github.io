@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        // String
+
+        let firstName = 'Ko';
+        let lastName = 'Ye Aung';
+        console.log(typeof(firstName));
+        console.log(typeof(lastName));
+        
+        console.log(firstName.length);
+        console.log(lastName.length);
+
+        let fullName = firstName.concat(' ', lastName);
+        console.log(fullName);
+        
+        let testName = firstName + ' ' + lastName;
+        console.log(testName);
+
+        console.log('testing');        
+        console.log('My name is ', fullName);
+        console.log('My name is '+ fullName);
+        document.write('My name is ', fullName);
+        
+
+        console.log('My name is fullname.');
+
+        console.log(`My name is ${fullName}.`);
+        
+        console.log(fullName[6]);
+
+        console.log(fullName.toLocaleLowerCase());
+        console.log(fullName.toUpperCase());
+        console.log(fullName.substr(3,2)); // substr (start, number)
+
+        let job = ' Web Developer ';
+        console.log(job);
+        console.log(job.trim());
+        
+        
+        let ser = 'JavaScript is funny!';
+        let ser_result = ser.search('S');
+        console.log(ser_result);
+        
+        let rep = 'I wanna visit Yangon';
+        console.log(rep);
+
+        let rep_result = rep.replace('Yangon', 'Mandalay');
+        console.log(rep_result);
+
+        let fees = '350,000,00';
+        console.log(fees);
+
+        fees = fees.replace(/\,/g, ''); // "// " သည် regular expression ရဲ့ အဖွင့်အပိတ်မှာသုံး ။ \, သည် , ကိုရှာပြီး g သည် GLobal flag ကို အားလုံးကိုရှာပါသည်။
+        console.log(fees);
+
+        let phno = ' 09 428 380 964'
+        console.log(phno);
+
+        phno = phno.replace(/\s+/g,''); // s သည် whitespace နဲ့ tab ကိုရှာပြီး ။ + သည် one or more ကို ဆိုလိုပါသည်။
+        console.log(phno);
+        
+        
+        
+        
+        
+        
+
+        
+        
+        
+        
+
+        
+        
+        
+        
+
+
+
+    </script>
+</body>
+</html>

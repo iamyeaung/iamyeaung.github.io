@@ -1,0 +1,1 @@
+document.write("<h1>This is Expternal JavaSripts</h1>")

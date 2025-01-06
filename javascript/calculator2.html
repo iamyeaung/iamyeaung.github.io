@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+
+    <style>
+        .error {
+          border-color: red;
+        }
+  
+        small {
+          color: red;
+        }
+      </style>
+
+
+</head>
+<body>
+    <h1>Calculator</h1>    
+    <form action="">
+        <label for="num1">Enter number 1 </label>
+        <input type="number" name="num1" id="num1">
+        <small id="num1_errorMessage"></small>
+        <br> <br>
+
+        <label for="num2">Enter number 2 </label>
+        <input type="number" name="num2" id="num2">
+        <small id="num2_errorMessage"></small>
+        <br> <br>
+
+        <label for="result">Total number is</label>
+        <input type="number" name="result" id="result" readonly>
+        <br> <br>
+    
+        <button type="button" onclick="add()">Add</button>
+        <button type="button" onclick="sub()">Sub</button>
+    </form>
+
+    <script>
+        function getInputValues(){
+            let number1 = Number(document.getElementById('num1').value);
+            let number2 = Number(document.getElementById('num2').value);
+            return [number1,number2];
+        }
+
+        function formValidation(){
+            // let num1 = document.getElementById('num1');
+            // let num2 = document.getElementById('num2');
+            
+            // let number1 = num1.value;
+            // let number2 = num2.value;
+
+            let num1Error = document.getElementById('num1_errorMessage');
+            let num2Error = document.getElementById('num2_errorMessage');
+
+
+            let [number1, number2] = getInputValues();
+
+            function removeError(){
+                num1.removeAttribute('class','error');
+                num2.removeAttribute('class','error');
+                num1Error.innerText = '';
+                num2Error.innerText = '';
+            }
+                 
+            if(number1 == '' || number2 == ''){
+                removeError();
+
+                if(number1 == ''){
+                    showError(num1Error,num1,'number 1 is required!');
+                }
+                if(number2 == ''){
+                    showError(num2Error,num2,'number 2 is required!');
+                }
+            }else{
+                removeError();
+                return{
+                    num1:number1,
+                    num2:number2
+                }
+            }
+
+            function showError(num_Error,num_Input,errorMessage){
+                num_Error.innerHTML = errorMessage;
+                num_Input.setAttribute('class','error');
+            }
+        }
+
+        function add(){ 
+            formValidation();
+            const [num1,num2] = getInputValues(); // Get Values
+            let total = num1 + num2;
+            document.getElementById('result').value = total;
+            
+             }
+
+        function sub(){
+            const [num1,num2] = getInputValues(); // Get Values
+            let total = num1 - num2;
+            document.querySelector('#result').value = total;
+        }
+
+
+    </script>
+</body>
+</html>

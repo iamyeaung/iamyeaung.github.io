@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let traffic_light = prompt('Enter a traffic light');
+        console.log(traffic_light);
+
+        if(traffic_light == 'red' ||traffic_light == 'Red' || traffic_light == 'RED'){
+            document.write('<p style="color: red;">Stop a car!</p>');
+        }else if(traffic_light == 'yellow' || traffic_light =='Yellow' || traffic_light =='YELLOW'){
+            document.write('<p style="color: yellow;">Wearning to red</p>');
+        }else if(traffic_light == 'green' || traffic_light =='Green' || traffic_light =='GREEN'){
+            document.write('<p style="color: green;">Ready to go</p>');
+        }else{
+            document.write('<p style="color: red;">Your Traffic Error</p>');
+        }
+        </script>
+
+        
+
+</body>
+</html>

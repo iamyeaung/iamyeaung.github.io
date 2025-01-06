@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <table style="width: 300px; height: 100px;">
+        <tr>
+            <td style="background-color: red;" onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transprent')"></td>
+
+            <td style="background-color: green;"
+            onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transprent')"></td>
+
+            <td style="background-color: blue;"
+            onmouseover="bgChange(this.style.backgroundColor)" onmouseout="bgChange('transprent')"></td>
+        </tr>
+    </table>    
+
+    <script>
+        function bgChange(aa){
+            console.log(aa);
+            document.body.style.backgroundColor = aa;
+            
+        }
+    </script>
+
+
+</body>
+</html>
