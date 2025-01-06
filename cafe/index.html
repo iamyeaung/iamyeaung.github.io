@@ -5,6 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Kyaw Cafe`</title>
     <link rel="stylesheet" href="css/stylel.css">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+
 </head>
 <body>
     <nav class="navbar">
@@ -15,9 +19,9 @@
         <div class="nav-menu">
             <ul>
                 <li><a href="">Home</a></li>
-                <li><a href="">Menu</a></li>
-                <li><a href="">About</a></li>
-                <li><a href="">Contact</a></li>
+                <li><a href="#menu">Menu</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
             </ul>
         </div>
     </nav>
@@ -44,7 +48,7 @@
 
          <!-- about kyaw cafe` -->
 
-         <div class="about">
+         <div class="about" id="about">
             <h2 class="menu-heading">About Kyaw Cafe`</h2>
             <p class="menu-about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro voluptatum eveniet labore recusandae error incidunt rerum, alias eius vero nulla optio dicta ab autem iure praesentium maxime doloremque natus qui quae quas commodi fugit distinctio? Rerum sint architecto assumenda! Perspiciatis perferendis voluptas nulla iure nemo dicta aspernatur beatae amet. Itaque.</p>
          </div>
@@ -68,8 +72,141 @@
             <h2 class="menu-heading">Si Lone Tea</h2>
             <p class="menu-about">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Tempora placeat fuga quibusdam harum odio, minima necessitatibus explicabo aperiam dolor porro, quae vel error architecto nesciunt similique quisquam. Nulla, fugit voluptatum.</p>
             <a href="" class="btn">Order Now</a>
+        </div>
+
+            <!-- Our Popular Menu -->
+        <h1 class="our-menu-title" id="menu">Our Popular Menu</h1>
+        <div class="our-menu">
+                <div class="menu-item">
+                    <img src="images/arrlukyaw.png" alt="" class="item-img">
+                    <div class="menu-content">
+                        <p class="item-name">Arr Lu Kyaw</p>
+                        <p class="item-price">2500 Ks</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/claypotmyeeshay.png" alt="" class="item-img">
+                    <div class="menu-content">
+                        <p class="item-name">Clay Pot Myee Shay</p>
+                        <p class="item-price">4000 Ks</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/hcanpra.png" alt="" class="item-img">
+                    <div class="menu-content">
+                        <p class="item-name">Hcan Pra</p>
+                        <p class="item-price">3000 Ks</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/shannoodles.png" alt="" class="item-img">
+                    <div class="menu-content">
+                        <p class="item-name">Shan Noodle</p>
+                        <p class="item-price">2500 Ks</p>
+                    </div>
+                </div>
+
+                <div class="menu-item">
+                    <img src="images/montdi.png" alt="" class="item-img">
+                    <div class="menu-content">
+                        <p class="item-name">Mont Di</p>
+                        <p class="item-price">1500 Ks</p>
+                    </div>
+                </div>
 
         </div>
+
+        <div class="view-more">
+            <a href="" class="btn">View More</a>
+        </div>
+
+        <!-- Contact Us -->
+
+        <div class="contact-us">
+            <h3>Contact Us</h3>
+            <div class="map">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3898.804632800505!2d96.1160867456485!3d21.92109821206366!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30cb73102e448657%3A0x17475e3a53b16f0d!2sKyaw%20Cafe!5e1!3m2!1sen!2sus!4v1732606916168!5m2!1sen!2sus" width="100%" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+        </div>
+
+
+        <!-- contact info -->
+        <div class="contact">
+            <div class="contact-info">
+                <div class="info">
+                    <span class="contact-icon">
+                        <!-- <i class="fa-solid fa-location-dot"></i> -->
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+
+                    <span class="contact-text">
+                        <h3>Location :</h3>
+                        <p>58st x 115A, Chan Myatharzi, Mandalay</p>
+                    </span>
+                    
+                </div>
+
+                <div class="info">
+                    <span class="contact-icon">
+                        <i class="fa-regular fa-clock"></i>
+                    </span>
+
+                    <span class="contact-text">
+                        <h3>Open Hour :</h3>
+                        <p>6:00 AM - 9:00 PM</p>
+                    </span>
+                    
+                </div>
+
+                <div class="info">
+                    <span class="contact-icon">
+                        <i class="fa-regular fa-envelope"></i>
+                    </span>
+
+                    <span class="contact-text">
+                        <h3>Email</h3>
+                        <p>kyawcafe@gmail.com</p>
+                    </span>
+                    
+                </div>
+             
+            </div>
+            <div class="contact-form" id="contact">
+                    <form action="">
+                        <div class="form-group">
+                            <label for="name">Name</label>
+                            <input type="text" name="name" id="name">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="Email">Email</label>
+                            <input type="email" name="email" id="emaill">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                                <textarea name="message" id="message"></textarea>
+                           </div>
+
+                        <button class="btn">Send</button>
+                    </form>
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+
+        <footer class="footer">
+            <p>
+                &copy;Copyright
+                <span class="footer-title">Kyaw cafe`</span>
+                All Right Reseverd
+            </p>
+            <p>Design By <a href="https://yeaung.com" target="_blank" class="dev">Ye Aung</a></p>
+        </footer>
 
 </body>
 </html>
