@@ -33,6 +33,7 @@
 
     <label for="year">Select Year :: </label>
     <select name="year" id="year">
+        <option value="">Select Year</option>
         <option value="first year">First Year</option>
         <option value="second year">Second Year</option>
         <option value="third year">Third Year</option>
@@ -66,8 +67,7 @@
             $('#add-button').click(function(){
                 //input validation
                 if($('#name').val() == '' || $('#email').val() == '' || $('#phone').val() == '' || $('#year').val() == ''){
-                    aleart('Please fill all the fields');
-                    return;
+                    alert('Please fill all the fields');
                 }
                 //Increment student count
                 studentCount ++;
