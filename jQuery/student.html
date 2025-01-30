@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        table{
+            margin-top: 20px;
+            border-collapse: collapse;
+            width: 50%;
+        }
+
+        th, td{
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+        th{
+            background-color: #f4f4f4;
+        }
+
+    </style>  
+</head>
+<body>
+    <div id="addStudent">
+        <h1>Add New Student</h1>
+        Name : <input type="text" id="name"><br><br>
+        Email : <input type="email" id="email"><br><br>
+        Phone : <input type="phone" id="phone"><br><br>
+        Year : <select name="year" id="year">
+            <option value="">Select Year</option>
+            <option value="first">First Year</option>
+            <option value="second">Second Year</option>
+            <option value="third">Third Year</option>
+        </select><br><br>
+
+        <button id="add-btn">Add Student</button>
+    </div>
+
+    <div id="update-stu">
+
+        <h1>Update Student</h1>
+        <input type="hidden" id="edit-key">
+        Name : <input type="text" id="update-name"><br><br>
+        Email : <input type="email" id="update-email"><br><br>
+        Phone : <input type="phone" id="update-phone"><br><br>
+        Year : <select name="year" id="update-year">
+            <option value="">Select Year</option>
+            <option value="first">First Year</option>
+            <option value="second">Second Year</option>
+            <option value="third">Third Year</option>
+        </select><br><br>
+
+        <button id="update-btn">Update Student</button>
+
+    </div>
+
+    <table> 
+        <thead>
+            <tr>
+                <th>No.</th>
+                <th>Name</th>
+                <th>Email</th>
+                <th>Phone</th>
+                <th>Year</th>
+                <th>Action</th>
+            </tr>
+        </thead>
+            <tbody id="stu-list"></tbody>
+    </table>
+
+    <script src="jquery-3.7.1.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            getData();
+          $('#update-stu').hide();
+            $('#add-btn').click(function(){
+
+                // input ကို ဒေတာကို လက်ခံ
+                let name = $('#name').val();
+                let email = $('#email').val();
+                let phone = $('#phone').val();
+                let year = $('#year').val();
+
+                // localStroage.setItem(key,dataString) => localStroage ထဲကို data အသစ်ထည့်ရင်သုံး။ ထည့်မဲ့ ဒေတာသည် String ဖြစ်ရမည်။
+                // locaStroage.getItem(key) => localStroage ထဲက data ကို ရယူချင်သုံး
+
+                // လက်ခံထားတဲ့ ဒေတာကို Object တည်ဆောက်
+                let students = {
+                    stu_name : name,
+                    stu_email : email,
+                    stu_phone : phone,
+                    stu_year : year
+                }
+                
+                let studentString = localStorage.getItem('students');
+
+                let studentArray;
+                if(studentString == null){
+                    studentArray = [];
+                }else{
+                    // JSON String ဆိုတာ object တွေစုထည့်ထားတဲ့ array လို့မှတ်လို့ရ
+                    // JSON String ကို  array ပြောင်းတာ
+                    studentArray = JSON.parse(studentString);
+                }
+                studentArray.push(students);
+                console.log(studentArray);           
+
+                //object ကို string ပြောင်း
+                let studentData = JSON.stringify(studentArray);
+                console.log(studentData);
+
+                //LocalStroage ထဲကို ထည့်
+                localStorage.setItem('students',studentData);            
+
+                $('#name').val('');
+                $('#email').val('');
+                $('#phone').val('');
+                $('#year').val('');
+
+                getData();
+            });
+
+            function getData(){
+                let stuString = localStorage.getItem('students');
+                let stuArray = JSON.parse(stuString);
+                console.log(stuArray);
+
+                // i = key
+                // v = value
+
+                let no = 1;
+                let data = '';
+
+                $.each(stuArray, function(i,v){
+                    let name = v.stu_name;
+                    let email = v.stu_email;
+                    let phone = v.stu_phone;
+                    let year = v.stu_year;
+
+                    
+                    data += `
+                    <tr>
+                        <td>${no++}</td>
+                        <td>${name}</td>
+                        <td>${phone}</td>
+                        <td>${email}</td>
+                        <td>${year}</td>  
+                        <td>
+                            <button class ='edit' 
+                            data-key = "${i}" 
+                            data-name = "${name}"
+                            data-email= "${email}"
+                            data-phone = "${phone}"
+                            data-year = "${year}"                            
+                            >Edit</button>    
+                            <button data-key='${i}' class='delete'>Delete</button>    
+                        </td>                 
+                    </tr>
+                    `;
+
+                });
+
+                $('#stu-list').html(data);               
+
+            }
+
+            $('#stu-list').on('click','.delete',function(){
+                let key = $(this).data('key');
+                console.log(key);
+
+                let ans = confirm('Are you sure delete?');
+                if(ans){
+                    let stuString = localStorage.getItem('students');
+                    if(stuString){
+                        let stuArray = JSON.parse(stuString);
+                        stuArray.splice(key,1); // splice(start,number)
+
+                        let stuData = JSON.stringify(stuArray);
+                        localStorage.setItem('students',stuData);
+
+                        getData();
+                    }
+                }
+                
+            });
+
+            $('#stu-list').on('click','.edit',function(){
+                $('#addStudent').hide();
+                $('#update-stu').show();
+
+                let key = $(this).data('key');
+                let edit_name = $(this).data('name');
+                let edit_email = $(this).data('email');
+                let edit_phone = $(this).data('phone');
+                let edit_year = $(this).data('year');
+                // console.log(edit_name,edit_email,edit_phone,edit_year);
+                
+                $('#edit-key').val(key);
+                $('#update-name').val(edit_name);
+                $('#update-email').val(edit_email);
+                $('#update-phone').val(edit_phone);
+                $('#update-year').val(edit_year);
+
+            });
+
+            $('#update-btn').click(function(){
+                let ukey = $('#edit-key').val();
+                let uname = $('#update-name').val();
+                let uemail = $('#update-email').val();
+                let uphone = $('#update-phone').val();
+                let uyear = $('#update-year').val();
+                // console.log(ukey,uname,uemail,uphone,uyear);
+                
+
+                let stuString = localStorage.getItem('students');
+                if(stuString){
+                    let stuArray = JSON.parse(stuString);
+
+                    stuArray[ukey].stu_name = uname;
+                    stuArray[ukey].stu_email = uemail;
+                    stuArray[ukey].stu_phone = uphone;
+                    stuArray[ukey].stu_year = uyear;
+
+                    let stuData = JSON.stringify(stuArray);
+                    localStorage.setItem('students',stuData);
+                    getData();
+
+                    $('#addStudent').show();
+                    $('#update-stu').hide();
+
+                }
+
+            });
+
+
+            
+        });
+
+    </script>
+</body>
+</html>
