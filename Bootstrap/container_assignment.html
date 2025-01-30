@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+
+    <style>
+        .box{
+            text-align: center;
+            color: white;
+            font-weight: bold;
+            font-size: 1.5rem;
+        }
+
+        .red { background-color: red; color: white; }
+        .orange { background-color: orange; }
+        .green { background-color: green; color: white; }
+        .yellow { background-color: yellow; color: black; }
+        .pink { background-color: pink; color: black;}
+        .blue { background-color: blue; color: white; }
+    </style>
+
+</head>
+<body>
+    <div class="container-fluid my-3 mx-3">
+        <!-- Row 1 -->
+      <div class="row my-1">
+        <div class="col-12 red box">Header</div>
+      </div>
+
+      <!-- Row 2 -->
+       <div class="row my-1">
+           
+           <div class="row">
+               
+            <div class="col-lg-12 col-md-8 orange box">Main Content</div>
+
+            <div class="col-lg-8">
+                <div class="row">
+                    <div class="col-lg-6 col-md-12 col-sm-12 yellow box p-5 my-1">yellow 1</div>
+                    <div class="col-lg-6 d-none d-lg-block yellow box p-5 my-1">yellow 2</div>
+                    <div class="col-lg-6 d-none d-lg-block yellow box p-5 my-1">yellow 3</div>
+                    <div class="col-lg-6 d-none d-lg-block yellow box p-5 my-1">yellow 4</div>
+                    <div class="col-lg-12 pink box my-1 p-5">Pink</div>
+                </div>
+            </div>
+            <div class="col-lg-4">
+                <div class="col-lg-12 bg-success box p-5 m-1">Sidebar</div>
+                <div class="col-lg-12 bg-primary box p-5 m-1">Sidebar</div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
+
