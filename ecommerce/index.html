@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="images/logo.png" type="image/png">
+    <title>Only Shopping Myanmar</title>
+    <meta name="description" content="The Number One Online Shopping Myanmar">
+       
+    <!-- Local Bootstrap CSS -->
+    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-grid.min.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-utilities.css">
+    <link rel="stylesheet" href="bootstrap/css/bootstrap-reboot.css">
+
+    <!-- Bootstrap Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+
+    <!-- Font Awesome Icons (CDN) -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <!-- Oter CSS -->
+    <link rel="stylesheet" href="slide/css/splide.min.css">
+    <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <!-- Top Navigation -->
+    <nav class="nav-bg">
+        <div class="container">
+        <!-- Hide on mobile, show on md and up -->
+            <div class="navbar navbar-expand d-none d-md-block">
+                <ul class="navbar-nav w-100 justify-content-lg-end justify-content-md-center">
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">Save More On App</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">Sell On Shop</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">Help & Support</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">Login</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">Sign Up</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white small py-1" href="">ဘာသာစကား</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+     
+    <!-- Main Navigation -->
+      <nav class="navbar navbar-expand-md nav-bg">
+        <div class="container py-1">
+            <div class="row align-items-center w-100">
+                    <!-- Logo and Toggle Button Container -->
+                <div class="col-12 col-md-2 d-flex justify-content-between align-items-center mb-3 mb-md-0">
+                        <!-- Logo -->
+                    <a class="navbar-brand text-decoration-none text-white text-uppercase fs-1 fw-bold" href="">Shop</a>
+
+                    <!-- Toggler Button - Mobile Only -->
+                    <button class="navbar-toggler d-md-none ms-auto border-white" 
+                            type="button" 
+                            data-bs-toggle="collapse" 
+                            data-bs-target="#mobile-menu"
+                            aria-expanded="false"
+                            aria-label="Toggle navigation"
+                            >
+                            
+                            <span class="navbar-toggler-icon"></span>
+                    </button>
+                </div>
+
+                <!-- Search Area -->
+                <div class="col-12 col-md-7 mb-3 mb-sm-0">
+                    <div class="position-relative">
+                        <input type="text" class="form-control py-2 px-3 rounded-sm" placeholder="Search in Shop" style="height: 2.5rem;">
+                        <button class="btn position-absolute top-0 end-0 h-100">
+                            <i class="bi bi-search text-danger"></i>
+                        </button>
+                    </div>
+                </div>
+                <!-- Cart and Download  - Desktop Only-->
+                <div class="col-md-3 d-none d-md-flex gap-2">
+                    <!-- Cart Icon with Link -->
+                    <div class="flex-grow-1 d-flex justify-content-md-center">
+                        <a class="bi bi-cart3 text-decoration-none text-white fs-3" href="#"></a>
+                    </div>
+                    <!-- Download App Button -->
+                    <div class="flex-grow-1">
+                        <a href="">
+                            <img src="images/get-now.png" alt="download-app" class="me-2 img-fluid" style="height: 40px;">
+                        </a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Dropdown -->
+             <div class="d-md-none">
+                <div class="collapse navbar-collapse mt-1" id="mobile-menu">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">Save More On App</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">Sell On Shop</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">Help & Support</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">Login</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">Sign Up</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link text-white small py-1" href="">ဘာသာစကား</a>
+                        </li>
+                    </ul>
+                 </div>
+    
+             </div>
+           
+        </div>
+      </nav>
+
+     <!-- Image Slider & Download Button -->
+          <div class="container-fluid">
+             <div class="row d-flex justify-content-center">
+                 <div class="col-12 col-lg-8 rounded">
+                     <section class="splide" aria-label="Splide Basic HTML Example">
+                         <div class="splide__track">
+                             <ul class="splide__list">
+                                 <li class="splide__slide">
+                                     <div>
+                                         <img class="rounded img-fluid w-100 object-fit-cover" src="images/slide/1.jpg" alt="">
+                                     </div>
+                                 </li>
+                                 <li class="splide__slide">
+                                     <div>
+                                         <img class="rounded img-fluid w-100 object-fit-cover" src="images/slide/2.jpg" alt="">
+                                     </div>
+                                 </li>
+                                 <li class="splide__slide">
+                                     <div>
+                                         <img class="rounded img-fluid w-100 object-fit-cover" src="images/slide/3.jpg" alt="">
+                                     </div>
+                                 </li>
+                                 <li class="splide__slide">
+                                     <div>
+                                         <img class="rounded img-fluid w-100 object-fit-cover" src="images/slide/4.jpg" alt="">
+                                     </div>
+                                 </li>
+                             </ul>
+                         </div>
+                     </section>     
+                 </div>
+                 <!-- Try Shop App MM -->
+                 <div class="d-none d-lg-block col-lg-3 gradient-bg-main rounded">
+                     <div class="rounded">
+                         <div class="d-flex justify-content-center">
+                             <div class="rounded d-flex flex-column">                                    
+                                 <div class="d-flex align-items-center justify-content-center">
+                                     <img class="w-10" style="width: 64px;" src="images/logo.png" alt="shop logo">
+                                     <h4 class="font-bold">Try Shop App MM</h4>
+                                 </div>
+                                 <!-- Main Content -->
+                                 <div class="gradient-bg rounded py-1">
+                                    <!-- Rating -->
+                                    <div class="rounded">
+                                         <div class="d-flex align-items-center justify-content-center text-white">
+                                             <span class="me-2">
+                                                <h5>★★★</h5>
+                                             </span>
+                                             <span>
+                                                <h5>4.8 Rated</h5>
+                                             </span>
+                                         </div>
+                                         <h5 class="d-flex justify-content-center fw-bold text-white">Download App Now</h5>
+                                     </div>    
+                                     
+                                     <div class="d-flex justify-content-center">
+                                        <div class="my-2">
+                                            <div class="d-flex align-items-center my-1">
+                                                <img class="mx-3" src="images/shipping.png" style="width: 35px; height: 35px;" alt="shop logo">
+                                                <div class="fw-bold fs-5 text-white">Get Free Shipping</div>
+                                            </div>
+                    
+                                            <div class="d-flex align-items-center my-1">
+                                                <img class="mx-3" src="images/vouchers.png" style="width: 35px; height: 35px;" alt="shop logo">
+                                                <div class="fw-bold fs-5 text-white">Get Vouchers</div>
+                                            </div>
+                                        </div>
+                                     </div>
+                                 </div>
+                                 <!-- QR Code & Download Button -->
+                                <div class="mx-5 my-1">
+                                 <div class="row align-items-center justify-content-center">
+                                     <div class="col-6">
+                                         <img class="img-fluid" src="images/qr.jpg" alt="qr code">
+                                     </div>
+                                     <div class="col-6 align-items-center">
+                                         <div class="py-2">
+                                             <a href="https://apps.apple.com/us/app/shop-online-shopping-app/id979214282">
+                                                 <img class="img-fluid" src="images/App-Store.png" alt="">
+                                             </a>
+                                         </div>
+                                         <div class="py-2">
+                                             <a href="https://play.google.com/store/apps/details?id=com.shop.android">
+                                                 <img class="img-fluid" src="images/Google-Play.png" alt="">
+                                             </a>
+                                         </div>
+                                     </div>
+                                     <div>
+                                         <p class="fw-bold">More Discont App</p>
+                                     </div>
+                                 </div>
+                                </div>
+                             </div>
+         
+                         </div>
+                     </div>
+                 </div>
+             </div>
+        </div>
+
+   <!-- Git Ads -->
+    <div class="container-fluid mt-3">
+        <div class="row">
+            <div class="col-12">
+                <div class="d-flex justify-content-center">
+                    <img class="img-fluid" src="images/ads.gif" alt="">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Categories -->
+    <div class="container-fluid" style="max-width: 1400px;">
+       <h3 class="d-flex my-3 justify-content-lg-start justify-content-sm-center">Categories</h3>
+      
+       <div class="row d-flex justify-content-center">
+            <!-- Category 1 -->           
+            <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/1.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Cleaning Buckets & Tubs</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 2 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/2.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Accessories</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 3 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/3.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-ti text-dark small mb-0">Switches</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 4 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/4.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 5 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/5.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 6 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/6.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 7 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/7.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 8 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/8.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 9 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/9.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 10 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/10.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 11 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/11.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Category 12 -->
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/category/12.jpg" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center justify-content-center card-title text-dark small mb-0">Facial Oils</h6>
+                        </div>
+                    </div>
+                </a>
+             </div>
+        
+       </div>
+       
+    </div>
+
+    <!-- Just For You -->
+    <div class="container-fluid" style="max-width: 1400px;">
+        <h3 class="d-flex my-3 justify-content-lg-start justify-content-sm-center">Just For You</h3>
+       
+        <div class="row d-flex justify-content-center">
+             <!-- Product 1 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                 <a href="#" class="text-decoration-none">
+                     <div class="card h-auto border-1 bg-light rounded">
+                         <div class="ratio ratio-1x1">
+                             <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/1.webp" alt="Cleaning">
+                         </div>
+                         <div class="card-body">
+                             <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">MagSafe ring Sticker</h6>
+                         
+                             <div>
+                                <span class="fw-bold" style="color: #f45c2c;">8,800 Ks</span>
+                                <span> -29%</span>
+                             </div>
+                             <div>
+                                <span class="text-warning">★★★★★</span>
+                                <span class="text-secondary">(208)</span>
+                             </div>
+                         </div>
+                     </div>
+                 </a>
+              </div>
+              <!-- Product 2 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/2.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">10# Caravan Crew anti-lost phone strap/hangin</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">6,336 Ks</span>
+                               <span> -63%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(208)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 3 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/3.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Kemei 3 in 1 Shaver</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">26,800 Ks</span>
+                               <span> -63%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+              <!-- Product 4 -->           
+              <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/4.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">iPad Case Gen9/Gen8/Gen7</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">17,760 Ks</span>
+                               <span> -63%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 5 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/5.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Electric Ear Pick</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">15,744 Ks</span>
+                               <span> -63%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 6 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/6.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Very Comfortable leather material</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">12,720 Ks</span>
+                               <span> -56%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(9)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 7 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/7.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">360 degree iPad</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">13,584 Ks</span>
+                               <span> -35%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(8)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 8 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/8.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Low Water level Filter</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">33,000 Ks</span>
+                               <span> -35%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(6)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 9 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/9.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Xiaomi Mi Pad5/Pro Film Paperlike drawing</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">18,864 Ks</span>
+                               <span> -29%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(4)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 10 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/10.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Samsung Galaxy S22 Ultra 5G (12+/256GB)</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">2,500,000 Ks</span>
+                               <span> -29%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(5)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+             <!-- Product 11 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/11.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Nps383 Men's Sunglasses Outdoor Sun Glasses</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">17,328 Ks</span>
+                               <span> -56%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+
+             <!-- Product 12 -->           
+             <div class="col-6 col-md-3 col-lg-2 mb-4">
+                <a href="#" class="text-decoration-none">
+                    <div class="card h-auto border-1 bg-light rounded">
+                        <div class="ratio ratio-1x1">
+                            <img class="w-100 h-100 object-fit-cover" src="images/jsut-for-you/12.webp" alt="Cleaning">
+                        </div>
+                        <div class="card-body">
+                            <h6 class="card-title fw-bold d-flex align-items-center card-title text-dark small mb-0">Game Controller US Joystick (2.4Ghz)</h6>
+                        
+                            <div>
+                               <span class="fw-bold" style="color: #f45c2c;">24,000 Ks</span>
+                               <span> -49%</span>
+                            </div>
+                            <div>
+                               <span class="text-warning">★★★★★</span>
+                               <span class="text-secondary">(1)</span>
+                            </div>
+                        </div>
+                    </div>
+                </a>
+             </div>
+        
+     </div>
+
+
+     <!-- Site Menu -->
+      <div class="container-fluid py-3" style="background-color: #f8f9fa;">
+        <div class="container">
+            <div class="row">
+                <!-- Customer Care -->
+                <div class="py-3 col-12 col-md-4">
+                   <h6 class="d-flex justify-content-center justify-content-md-start fw-bold fs-3">Customer Care</h6>
+                   <p class="d-flex justify-content-center justify-content-md-start fs-2">----------------------</p>
+                   <div class="d-flex justify-content-center justify-content-md-start">
+                        <ul>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Health Center</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">How to buy?</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Corporate & Bulk Purchasing</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Return & Refunds</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Contact Us</a>
+                            </li>
+                        </ul>
+                   </div>
+                </div>
+
+                <!-- Shop -->
+                <div class="py-3 col-12 col-md-4">
+                    <h6 class="d-flex justify-content-center justify-content-md-start fw-bold fs-3">Shop</h6>
+                    <p class="d-flex justify-content-center justify-content-md-start fs-2">----------------------</p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <ul>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">About Shop</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Careers</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Terms & Conditions</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Privacy</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Online Shopping App</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Shop University</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Sell On Shop</a>
+                            </li>
+                            <li class="mb-2 fs-4">
+                                <a class="text-decoration-none text-dark" href="#">Code Of Conduct</a>
+                            </li>
+                        </ul>
+                    </div>        
+                </div>
+
+                <!-- Download Button -->
+                <div class="py-3 col-12 col-md-4">
+                    <h6 class="fw-bold fs-3 d-flex justify-content-center">Download App</h6>
+                    <p class="fs-2 d-flex justify-content-center">----------------------</p>
+                
+                    <div class="w-100">
+                        <div class="mx-auto" style="max-width: 200px;">
+                            <!-- Apple Store  -->
+                                 <div class="py-3 d-flex justify-content-center">
+                                     <a href="https://apps.apple.com/us/app/shop-online-shopping-app/id979214282">
+                                         <img class="img-fluid" style="width: 200px; height: 65px;" src="images/app-store-2.png" alt="">
+                                     </a>
+                                 </div>
+                            <!-- Play Store -->
+                                <div class="py-3 d-flex justify-content-center">
+                                    <a href="https://play.google.com/store/apps/details?id=com.shop.android">
+                                        <img class="img-fluid" style="width: 200px; height: 65px;" src="images/pay-store-1.png" alt="">
+                                    </a>
+                                </div>
+                            <!-- Huawei Store -->
+                                <div class="py-3 d-flex justify-content-center">
+                                    <a href="https://appgallery.huawei.com/?spm=a2a0e.tm80335412.footer_top.huawei.6b0d7fe4mvZiC2&scm=1003.4.icms-zebra-100010652-2860784.OTHER_5417611007_2539922#/app/C101672171">
+                                        <img class="img-fluid" style="width: 200px; height: 65px;" src="images/huawei-app.png" alt="">
+                                    </a>
+                                </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+      </div>
+
+        <hr>
+      <!-- Payment Method -->
+       <div class="container mt-1">
+        <div class="row justify-content-center">
+            <div class="col-12 col-md-5 mb-3">
+                <h6 class="mb-0 fs-3 fw-bold d-flex justify-content-center">Payment Method</h6>
+                <p class="mt-0 fs-3 d-flex justify-content-center">--------------------------</p>
+                    <div class="d-flex justify-content-center justify-content-md-start">
+                        <span class="d-flex justify-content-center col-2 px-3">
+                            <img class="img-fluid w-100 h-75" src="images/payment/cash.png" alt="cash">
+                        </span>
+                        <span class="d-flex justify-content-center col-2 px-3">
+                            <img class="img-fluid ရ" src="images/payment/visa.png" alt="visa">
+                        </span>
+                        <span class="d-flex justify-content-center col-2 px-3">
+                            <img class="img-fluid w-100 h-75" src="images/payment/master.png" alt="master">
+                        </span>
+                        <span class="d-flex justify-content-center col-2 px-3">
+                            <img class="img-fluid w-100 h-75" src="images/payment/jcb.png" alt="jcb">
+                        </span>
+                        <span class="d-flex justify-content-center col-2 px-3">
+                            <img class="img-fluid w-100 h-75" src="images/payment/wave.png" alt="wave">
+                        </span>
+                </div>
+            </div>
+
+            <!-- Verified By -->
+            <div class="col-12 col-md-5">
+                <h6 class="mb-0 fs-3 fw-bold d-flex justify-content-center">Verified By</h6>
+                <p class="mt-0 fs-3 d-flex justify-content-center">--------------</p>
+                
+                <div class="d-flex justify-content-center">
+                    <img class="d-flex justify-content-center img-fluid" style="width: 100px; height: 50px;" src="images/payment/pci.png" alt="pci">
+                </div>
+            </div>
+        </div>
+       </div>
+       <hr>
+    <!-- Footer -->
+     <footer class="my-3">
+        <div class="container">
+            <div class="row">
+                <!-- Shop International Section -->               
+                     <div class="col-12 col-lg-8"> 
+                         <h5 class="fw-bold mb-3 text-center text-md-start">Shop International</h5>
+                           <div class="">
+                            <div class="d-flex flex-wrap gap-3">
+                                <span class="col-12 col-md-5 col-lg-2">
+                                     <a class="text-decoration-none text-secondary" href="#">
+                                          <div class="d-flex align-items-center">
+                                              <img class="img-fluid" src="images/flag/pakistan.png" alt="" style="max-width: 35px; max-height: 35px;">
+                                              <span class="px-2 fs-4">Pakistan</span>
+                                          </div> 
+                                      </a>
+                                </span>
+                                <span class="col-12 col-md-5 col-lg-2">
+                                    <a class="text-decoration-none text-secondary" href="#">
+                                     <div class="d-flex align-items-center">
+                                         <img class="img-fluid" src="images/flag/bangladesh.png" alt="" style="max-width: 35px; max-height: 35px;">
+                                         <span class="px-2 fs-4">Bangladesh</span>
+                                     </div> 
+                                   </a>
+                                </span>
+                                <span class="col-12 col-md-5 col-lg-2">
+                                    <a class="text-decoration-none text-secondary" href="#">
+                                      <div class="d-flex align-items-center">
+                                          <img class="img-fluid" src="images/flag/srilanka.png" alt="" style="max-width: 35px; max-height: 35px;">
+                                          <span class="px-2 fs-4">SriLanka</span>
+                                      </div> 
+                                    </a>
+                                </span>
+                                <span class="col-12 col-md-5 col-lg-2">
+                                    <a class="text-decoration-none text-secondary" href="#">
+                                      <div class="d-flex align-items-center">
+                                          <img class="img-fluid" src="images/flag/myanmar.png" alt="" style="max-width: 35px; max-height: 35px;">
+                                          <span class="px-2 fs-4">Myanmar</span>
+                                      </div> 
+                                    </a>
+                                </span>
+                                <span class="col-12 col-md-5 col-lg-2">
+                                    <a class="text-decoration-none text-secondary" href="#">
+                                      <div class="d-flex align-items-center">
+                                          <img class="img-fluid" src="images/flag/nepal.png" alt="" style="width: 35px; height: 35px;">
+                                          <span class="px-2 fs-4">Nepal</span>
+                                      </div> 
+                                    </a>
+                                </span>
+                             </div>
+                           </div>
+                     </div>
+                
+              <!-- Follow Us -->
+                <div class="col-12 col-lg-4 mt-4 mt-lg-0">
+                    <h5 class="fw-bold text-center text-md-start">Follow Us</h5> 
+                    <div class="d-flex justify-content-center justify-content-md-start my-3">
+                        <a href="#">
+                            <img class="img-fluid mx-2" style="width: 35px; height: 35px;" src="images/follow/fb.png" alt="facebook">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid mx-2" style="width: 35px; height: 35px;" src="images/follow/in.png" alt="instergram">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid mx-2" style="width: 35px; height: 35px;" src="images/follow/yt.png" alt="Youtube">
+                        </a>
+                        <a href="#">
+                            <img class="img-fluid mx-2" style="width: 35px; height: 35px;" src="images/follow/blog.png" alt="Blog">
+                        </a>
+                     </div>
+                </div>
+            </div>
+         </div>
+     </footer>
+       
+    <!-- Bootstrap JS -->
+    <script src="bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="slide/js/splide.min.js"></script>
+
+    <!-- Splide Initialization -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        new Splide('.splide', {
+            type: 'loop',
+            perPage: 1,
+            autoplay: true,
+            interval: 3000,
+            arrows: true,
+            pagination: true,
+            speed: 800,
+            pauseOnHover: false,
+        }).mount();
+    });
+    </script>
+</body>
+</html>
